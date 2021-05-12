@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'kiwi.breen'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    compile 'io.vertx:vertx-auth-common:4.0.3'
+    compile 'io.vertx:vertx-auth-oauth2:4.0.3'
+    compile 'io.vertx:vertx-web-openapi:4.0.3'
+    compile 'io.vertx:vertx-web-api-service:4.0.3'
+    compile 'io.vertx:vertx-auth-oauth2:4.0.3'
+    compileOnly 'io.vertx:vertx-codegen:4.0.3'
+
+    annotationProcessor 'io.vertx:vertx-codegen:4.0.3:processor'
+}
+
+test {
+    useJUnitPlatform()
+}
